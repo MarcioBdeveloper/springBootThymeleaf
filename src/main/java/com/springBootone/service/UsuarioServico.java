@@ -24,4 +24,12 @@ public class UsuarioServico implements Serializable{
 	public void salvar(Usuario usuario){
 		this.usuarioRepository.save(usuario);
 	}
+	
+	public void excluir(Usuario usuario){
+		this.usuarioRepository.delete(usuario);
+	}
+	
+	public Usuario buscaPorId(Long id){
+		return this.usuarioRepository.findOne(id);
+	}
 }
